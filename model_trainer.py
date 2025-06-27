@@ -91,6 +91,6 @@ loss, accuracy = model.evaluate(validation_generator)
 print("Training Loss:", loss)
 print("Training Accuracy:", accuracy)
 
-# Save The Trained Model In The Current Working Directory
+# Save The Trained Model In The Current Directory
 
 model.save('facial_emotion_recognition.h5')
