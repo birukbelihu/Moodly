@@ -2,13 +2,13 @@
 
 import os
 
-training_data_path = '/kaggle/input/face-expression-recognition-dataset/images/train'
-validation_data_path = '/kaggle/input/face-expression-recognition-dataset/images/validation'
+training_data_path = 'face-expression-recognition-dataset/images/train'
+validation_data_path = 'face-expression-recognition-dataset/images/validation'
 
 print(f" Training Subfolders: {os.listdir(training_data_path)}")
 print(f" Validation Subfolders: {os.listdir(validation_data_path)}")
 
-# Split The Dataset Into Training & Validation
+# Split The Dataset Into Training & Validation Set
 
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
@@ -91,6 +91,6 @@ loss, accuracy = model.evaluate(validation_generator)
 print("Training Loss:", loss)
 print("Training Accuracy:", accuracy)
 
-# Save The Trained Model In Kaggle Working Directory
+# Save The Trained Model In The Current Working Directory
 
 model.save('facial_emotion_recognition.h5')
