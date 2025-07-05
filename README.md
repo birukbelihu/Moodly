@@ -11,7 +11,7 @@ A Simple Facial Emotion Recognition System In A Live Camera Using Computer Visio
 
 To Get Started With Moodly On Your Local Machine Follow This Simple Steps One By One To Get Up & Running.
 
-Make Sure You Have **[Git](https://git-scm.com/)** & **[Python](https://python.org)** Installed On Your Machine.
+Make Sure You Have **[Git]**(https://git-scm.com/) & **[Python]**(https://python.org) Installed On Your Machine.
 
 ```
 git --version
