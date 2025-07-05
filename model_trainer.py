@@ -1,6 +1,11 @@
 # Check Training & Validation Set
 
 import os
+from tensorflow.keras.optimizers import Adam
+from keras.layers import Conv2D, MaxPooling2D
+from tensorflow.keras.models import Sequential
+from keras.layers import Dropout, Flatten, Dense
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 training_data_path = 'face-expression-recognition-dataset/images/train'
 validation_data_path = 'face-expression-recognition-dataset/images/validation'
@@ -9,8 +14,6 @@ print(f" Training Subfolders: {os.listdir(training_data_path)}")
 print(f" Validation Subfolders: {os.listdir(validation_data_path)}")
 
 # Split The Dataset Into Training & Validation Set
-
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
 
 IMAGE_SIZE = (48, 48)
 BATCH_SIZE = 64
@@ -50,11 +53,6 @@ print(training_generator.class_indices)
 
 # Create The Facial Emotion Recognition CNN (Convolutional Neural Network)
 
-from keras.layers import Conv2D, MaxPooling2D
-from tensorflow.keras.models import Sequential
-from keras.layers import Dropout, Flatten, Dense
-from tensorflow.keras.optimizers import Adam
-
 EMOTIONS_COUNT = 7
 
 model = Sequential()
@@ -93,4 +91,4 @@ print("Training Accuracy:", accuracy)
 
 # Save The Trained Model In The Current Directory
 
-model.save('facial_emotion_recognition.h5')
+model.save('moodly.h5')

@@ -10,7 +10,7 @@ def get_face_detector_caffe_model() -> str:
 
 
 def get_facial_emotion_recognition_model() -> str:
-    return "models/facial_emotion_recognition.h5"
+    return "models/moodly.h5"
 
 
 def get_facial_emotion_recognition_model_classes() -> list[str]:
